@@ -19,7 +19,7 @@ PRODUCT_NAME := aosp_memdump
 PRODUCT_BRAND := memdump
 PRODUCT_MODEL := memdump on hammerhead
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_RESTRICT_VENDOR_FILES := true
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 $(call inherit-product, vendor/memdump/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
@@ -29,3 +29,7 @@ PRODUCT_NAME := aosp_memdump
 PRODUCT_PACKAGES += \
     Callguard \
     Callblocking
+
+# Boot Animation
+PRODUCT_COPY_FILES += \
+    vendor/memdump/bootanimation.zip:system/media/bootanimation.zip
