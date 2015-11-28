@@ -33,3 +33,10 @@ PRODUCT_PACKAGES += \
 # Boot Animation
 PRODUCT_COPY_FILES += \
     vendor/memdump/bootanimation.zip:system/media/bootanimation.zip
+
+# proprietary libs
+PRODUCT_COPY_FILES += \
+    vendor/memdump/prebuild/lib/librpmb.so:system/lib/librpmb.so \
+    vendor/memdump/prebuild/lib/libssd.so:system/lib/libssd.so \
+    vendor/memdump/prebuild/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
+    vendor/memdump/prebuild/vendor/lib/libthermalioctl.so:system/vendor/lib/libthermalioctl.so
